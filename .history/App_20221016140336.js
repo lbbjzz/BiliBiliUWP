@@ -106,17 +106,19 @@ const App: () => Node = () => {
   }, [noUpdate]);
 
   return (
+    
+
     <SafeAreaView style={backgroundStyle}>
       <StatusBar
         barStyle={isDarkMode ? 'light-content' : 'dark-content'}
         backgroundColor={backgroundStyle.backgroundColor}
       />
+      
       <ScrollView
         contentInsetAdjustmentBehavior="automatic"
         style={backgroundStyle}>
         <Header />
         {/* <Image source={require('./img.png')} /> */}
-        <QRCode value="http://awesome.link.qr" size={200} />
         <View
           style={{
             backgroundColor: isDarkMode ? Colors.black : Colors.white,

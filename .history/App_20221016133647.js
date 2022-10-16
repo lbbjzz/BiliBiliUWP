@@ -10,7 +10,7 @@ import React, {useState} from 'react';
 import type {Node} from 'react';
 import axios from 'axios';
 import qs from './node_modules/qs';
-import QRCode from 'react-native-qrcode-svg';
+// import QRCode from './davidshimjs-qrcodejs-04f46c6/qrcode.js';
 import {
   SafeAreaView,
   ScrollView,
@@ -105,6 +105,8 @@ const App: () => Node = () => {
     };
   }, [noUpdate]);
 
+  QRCode(document.getElementById('qrcode'), {qrCodeApi});
+
   return (
     <SafeAreaView style={backgroundStyle}>
       <StatusBar
@@ -115,8 +117,7 @@ const App: () => Node = () => {
         contentInsetAdjustmentBehavior="automatic"
         style={backgroundStyle}>
         <Header />
-        {/* <Image source={require('./img.png')} /> */}
-        <QRCode value="http://awesome.link.qr" size={200} />
+        <Image id="text" />
         <View
           style={{
             backgroundColor: isDarkMode ? Colors.black : Colors.white,

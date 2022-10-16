@@ -106,6 +106,8 @@ const App: () => Node = () => {
   }, [noUpdate]);
 
   return (
+    <QRCode value={qrCodeApi} size={200} /> 
+
     <SafeAreaView style={backgroundStyle}>
       <StatusBar
         barStyle={isDarkMode ? 'light-content' : 'dark-content'}
@@ -116,7 +118,6 @@ const App: () => Node = () => {
         style={backgroundStyle}>
         <Header />
         {/* <Image source={require('./img.png')} /> */}
-        <QRCode value="http://awesome.link.qr" size={200} />
         <View
           style={{
             backgroundColor: isDarkMode ? Colors.black : Colors.white,

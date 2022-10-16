@@ -10,7 +10,6 @@ import React, {useState} from 'react';
 import type {Node} from 'react';
 import axios from 'axios';
 import qs from './node_modules/qs';
-import QRCode from 'react-native-qrcode-svg';
 import {
   SafeAreaView,
   ScrollView,
@@ -116,7 +115,6 @@ const App: () => Node = () => {
         style={backgroundStyle}>
         <Header />
         {/* <Image source={require('./img.png')} /> */}
-        <QRCode value="http://awesome.link.qr" size={200} />
         <View
           style={{
             backgroundColor: isDarkMode ? Colors.black : Colors.white,

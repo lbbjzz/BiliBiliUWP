@@ -111,12 +111,11 @@ const App: () => Node = () => {
         barStyle={isDarkMode ? 'light-content' : 'dark-content'}
         backgroundColor={backgroundStyle.backgroundColor}
       />
-      <ScrollView
+            <ScrollView
         contentInsetAdjustmentBehavior="automatic"
         style={backgroundStyle}>
         <Header />
         {/* <Image source={require('./img.png')} /> */}
-        <QRCode value="http://awesome.link.qr" size={200} />
         <View
           style={{
             backgroundColor: isDarkMode ? Colors.black : Colors.white,

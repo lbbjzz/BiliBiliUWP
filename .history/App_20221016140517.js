@@ -116,7 +116,6 @@ const App: () => Node = () => {
         style={backgroundStyle}>
         <Header />
         {/* <Image source={require('./img.png')} /> */}
-        <QRCode value="http://awesome.link.qr" size={200} />
         <View
           style={{
             backgroundColor: isDarkMode ? Colors.black : Colors.white,

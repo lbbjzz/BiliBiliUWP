@@ -10,7 +10,6 @@ import React, {useState} from 'react';
 import type {Node} from 'react';
 import axios from 'axios';
 import qs from './node_modules/qs';
-import QRCode from 'react-native-qrcode-svg';
 import {
   SafeAreaView,
   ScrollView,
@@ -103,6 +102,7 @@ const App: () => Node = () => {
     return () => {
       // console.log('componentWillUnmount');
     };
+  // eslint-disable-next-line react-hooks/exhaustive-deps
   }, [noUpdate]);
 
   return (
@@ -115,8 +115,7 @@ const App: () => Node = () => {
         contentInsetAdjustmentBehavior="automatic"
         style={backgroundStyle}>
         <Header />
-        {/* <Image source={require('./img.png')} /> */}
-        <QRCode value="http://awesome.link.qr" size={200} />
+        <Image id="text" />
         <View
           style={{
             backgroundColor: isDarkMode ? Colors.black : Colors.white,
